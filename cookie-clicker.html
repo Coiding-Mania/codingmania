@@ -1,0 +1,69 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,       initial-scale=1.0">
+    <title>Cookie Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: gray; 
+           
+        }
+        #clicker {
+            padding: 166px;
+            font-size: 24px;
+            cursor: pointer;
+            background-image:url('https://i.ibb.co/vscf9Fg/1201e1cc-1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+          background-color: transparent;
+        }
+      h1 {
+        font-size: 46px;
+       color: purple;
+        text-decoration: underline;
+      }
+      p{
+        font-size: 26px;
+        color: skyblue;
+      }
+      
+    </style>
+</head>
+<body>
+    <h1>Cookie Clicker Game</h1>
+  <br>
+  <br>
+  
+    <p>Click the button 10000 times to win!</p>
+  <br>
+    <button id="clicker">Click Me!</button>
+    <p id="counter">0 clicks</p>
+
+    <script>
+        var button = document.getElementById('clicker');
+        var clickCount = 0;
+        function handleClick() {
+            clickCount++;
+document.getElementById('counter').textContent = clickCount + ' clicks';
+  if (clickCount >= 10000) {
+    alert('Congratulations! You clicked 100 times. You win!');
+
+                
+                button.disabled = true;
+            }
+        }
+
+      
+        button.addEventListener('click', handleClick);
+    </script>
+  
+</body>
+</html>

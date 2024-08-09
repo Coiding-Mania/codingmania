@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="images/Coding Mania pfp (16x16)).ico">
+  <title>Right Click CPS Test</title>
+  <style type="text/css">
+    body {
+      background-color: #7c7c7c;
+    }
+    #content {
+      width: 290px;
+      border: 10px solid #003a1f;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 20px;
+      user-select: none;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(#67ffeb, #6e9cff);
+      box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+      border-radius: 25px;
+      font-family: 'ABeeZee';
+    }
+    #clickarea {
+      border-radius: 25px;
+      width: 500px;
+      height : 300px;
+      border: 20px solid #001644;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 20px;
+      position: relative;
+    }
+    #logo {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      margin-top: 50px;
+      display: block;
+      user-select: none;
+    }
+    #start {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      border: 3;
+      font-family: 'ABeeZee';
+      height:150px;
+      width:250px;
+      line-height: 2.5;
+      padding: 0 20px;
+      font-size: 2rem;
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+      border-radius: 20px;
+      background: #6e9cff;
+      box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                  inset -2px -2px 3px rgba(0, 0, 0, .6);
+      filter: blur(15px);
+      transition: filter 0.3s;
+    }
+    #start:hover {
+      background: #8db1ff;
+      filter: blur(0px);
+    }
+    #start:active {
+      box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                  inset 2px 2px 3px rgba(0, 0, 0, .6);
+    }
+    
+h1{
+      font-family: 'ABeeZee';
+      text-align: center;
+      font-size: 40px;
+      color: #fff;
+      text-shadow: 5px 5px 10px #000;
+      color: aqua;
+    }
+
+    .right{
+      position: relative;
+      top: 80px;
+      left: 79%;
+      display: inline-block;
+      width: 100px;
+      height: 60px;
+      border-radius: 10%;
+      color: white;
+      font-weight: bold;
+      line-height: 60px;
+      text-align: center;
+      margin: 0 10px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    .right:hover {
+      background: #8db1ff;
+      transition: 1s;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <a href="Cps.html" class="right">Left Cps</a>
+   </div>
+ </div>
+ <a href="index.html">
+  <img src="images/Coding Mania pfp.jpg" alt="Coding Mania Logo" class="center" style="width: 100px; height: 100px; border-radius: 100%;">
+</a>
+<h1>Left Click CPS Tester by Coding Mania</h1>
+  <div id="content">
+    Timer: <span id="timer"></span><br/>
+    Score: <span id="score"></span><br/>
+    Right Clicks/s: <span id="clicks"></span>
+  </div>
+  <div id="clickarea">
+    <button id="start">Start</button>
+  </div>
+  <script type="text/javascript">
+    var score;
+    var duration = 10;
+    var startTime;
+    var ended = true;
+    var timerTxt = document.getElementById("timer");
+    var scoreTxt = document.getElementById("score");
+    var clicksTxt = document.getElementById("clicks");
+    var startBtn = document.getElementById("start");
+    var clickArea = document.getElementById("clickarea");
+    var show = function(elem) {
+      elem.style.display = 'inline';
+    };
+    var hide = function(elem) {
+      elem.style.display = 'none';
+    };
+    function startGame() {
+      hide(startBtn);
+      score = -1;
+      ended = false;
+      startTime = new Date().getTime();
+      var timerId = setInterval(function() {
+        var total = (new Date().getTime() - startTime) / 1000;
+        if (total < duration) {
+          timerTxt.textContent = total.toFixed(3);
+          clicksTxt.textContent = (score / total).toFixed(2);
+        } else {
+          ended = true;
+          clearInterval(timerId);
+          endGame();
+        }
+      }, 1);
+  }
+    
+  
+  function endGame() {
+  var clicsBySeconds = (score / duration).toFixed(2);
+  timerTxt.textContent = duration.toFixed(3);
+  clicksTxt.textContent = clicsBySeconds;
+  show(startBtn);
+  setTimeout(function() {
+    if (clicsBySeconds > 100) {
+      alert('Excellent Score!');
+    } else {
+      alert('You made ' + score + ' right clicks in ' + duration +
+      ' seconds. It is ' + clicsBySeconds +
+      ' clicks by seconds');
+    }
+  }, 10);
+}
+  startBtn.addEventListener("click", function(e) {
+    startGame();
+  });
+  clickArea.addEventListener("contextmenu", function(e) {
+    e.preventDefault(); // Prevent default right-click behavior
+    if (!ended) {
+      score++;
+      scoreTxt.textContent = score;
+    }
+  });
+
+
+</script>
+</body>
+</html>

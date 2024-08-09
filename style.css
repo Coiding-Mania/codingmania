@@ -1,0 +1,583 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  transition: background-color 0.5s;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+main {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: -8px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+a {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+header {
+  background-image: url('login-bg.png');
+  background-size:cover;
+  background-position: center ;
+  background-repeat: no-repeat;
+  
+  padding: 80px 190px 120px;
+  margin: -8px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive; 
+  font-style: italic;
+  color: #e2635a; 
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 
+  30px #fff, 0 0 40px red, 0 0 70px red, 0 0 
+  80px red, 0 0 100px red, 0 0 150px red;
+  font-size: 42px;
+  text-decoration: underline;
+  text-decoration-color: #3e5c63;
+  animation: fade 3s ease 0s;
+  pointer-events: none;
+     } 
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+h2 {
+  color: red;
+  font-size: 30px;
+  text-align: center;
+  pointer-events: none;
+}
+
+h3 {
+  font-size: 32px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 
+  30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 
+  80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+  pointer-events: none;
+  animation: fade 3s ease 0s;
+  
+     } 
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  animation: fade 3s ease 0s;
+  pointer-events: none;
+} 
+@keyframes fade {
+ 0% {
+   opacity: 0;
+ }
+ 100% {
+   opacity: 1;
+ }
+}
+
+p {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+p {
+  color: white;
+  pointer-events: none;
+}
+
+p2 {
+  color: #e47e0a;
+  font-size: 20px;
+  text-align: center;
+  pointer-events: none;
+}
+
+main {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button-name {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  color: white;
+}
+
+.button:hover .button-name {
+  opacity: 1;
+  color: purple;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 40px;
+  }
+}
+
+
+
+.button-container {
+  margin-top: 10px;
+}
+
+.button {
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.button-name {
+  bottom: -15px;
+}
+
+
+.logo {
+  position: relative;
+  z-index: 2;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  position: absolute;
+  width: 98.4%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+nav a {
+  display: inline-block;
+  color: #e82121;
+  text-align: center;
+  padding: 0.8px 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #9b2929;
+  text-shadow:#1b1b1b;
+}
+
+.social-buttons {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.social-button {
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+  border-radius: 10%;
+  color: white;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  margin: 0 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.youtube {
+ background-color: red;
+}
+
+.github {
+  background-color: gray;
+}
+
+.whatsapp {
+  background-color: green;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
+
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+    transition: 0.3s ease;
+    animation: fade 3s ease 0s;
+  
+  } 
+ @keyframes fade {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+ }
+
+  .profile-pic:hover {
+     transform: scale(1.1); 
+  }
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: orange;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8c00;
+}
+
+
+
+.website-link {
+  color: #007bff; 
+  text-decoration: none; 
+  font-size: 20px; 
+  background-color: #8000ff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 1s ease;
+  padding: 10px;
+}
+
+.website-link:hover {
+  transform: scale(1.1);
+  color: #0056b3;
+}
+
+.browser {
+  color: #993d3d; 
+  text-decoration: none; 
+  font-size: 20px; 
+  background-color: #e67519;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 1s ease;
+  padding: 10px;
+}
+
+.browser:hover {
+  transform: scale(1.1);
+  color: #ba3636;
+}
+
+.login {
+  color: #1e27ae; 
+  text-decoration: none; 
+  font-size: 20px; 
+  background-color: #c51111;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 1s ease;
+  padding: 10px;
+}
+
+.login:hover {
+  transform: scale(2.1);
+  color: #ba3636;
+}
+
+.clicker{
+  color: #1cc49a; 
+  text-decoration: none; 
+  font-size: 20px; 
+  background-color: #bbb616;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 1s ease;
+  padding: 10px;
+}
+
+.clicker:hover {
+  transform: scale(2.1);
+  color: #ba3636;
+}
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; 
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px; 
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#Insta_Akshat {
+  background: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 19px;
+}
+
+
+
+        
+#changeBgButton {
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: #ddd;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; /* Ensure the moon/sun doesn't overflow */
+}
+
+#toggleCircle {
+  width: 20px;
+  height: 20px;
+  background-color: #777;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.5s, background-color 0.5s; /* Add background-color transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+#changeBgButton.on {
+  background-color: rgb(68, 22, 194); /* Change background color to skyblue when on (sun) */
+}
+
+#changeBgButton.off {
+  background-color: rgb(45, 152, 214); /* Change background color to skyblue when on (sun) */
+}
+
+#changeBgButton.on #toggleCircle {
+  transform: translateX(24px);
+  background-color: #ffeb3b; /* Change color to yellow when background is white */
+}
+
+/* Animations */
+@keyframes slideOn {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(24px); }
+}
+
+@keyframes slideOff {
+  0% { transform: translateX(24px); }
+  100% { transform: translateX(0); }
+}
+
+#changeBgButton.on #toggleCircle {
+  animation: slideOn 0.5s ease-in-out forwards;
+}
+
+#changeBgButton.off #toggleCircle {
+  animation: slideOff 0.5s ease-in-out forwards;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 40px;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  h3 {
+    font-size: 24px;
+  }
+  
+  h4 {
+    font-size: 16px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+  
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .button {
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .button-name {
+    bottom: -10px;
+  }
+  
+  .social-button {
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    margin: 0 5px;
+  }
+  
+  .social-buttons {
+    margin-top: 20px;
+  }
+  
+  nav {
+    padding: 0px 1px;
+    width: 99.2%;
+  }
+  nav a {
+    padding: 0.5px 4px;
+  }
+  
+  .website-link,
+  .browser,
+  .login,
+  .clicker {
+    font-size: 16px;
+    padding: 8px;
+  }
+  
+
+  header {
+      padding: 80px 40px 40px; /* Increase top padding to move content down */
+      background-position: center 30%; /* Adjust background position */
+      background-attachment: local;
+    
+    }
+  
+
+  .tooltip .tooltiptext {
+    width: 100px;
+    padding: 3px 0;
+    font-size: 12px;
+  }
+}
+
+
+.dc {
+  text-align: right;
+}
